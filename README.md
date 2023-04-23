@@ -1,7 +1,21 @@
+#  Code challenge for ClickBus company
+
+Objective: Create a currency converter using a public API that converts 1 USD or PLN to MXN, EUR, SGD, RUB, CAD, JPY, and GBP. The API used is from https://rapidapi.com/apininjas/api/currency-converter-by-api-ninjas (registration required).
+
+Requirements:
+
+- A form on the first screen where the user can select the base currency and click "Convert"
+- Upon clicking "Convert", asynchronous API requests should be made for each currency
+- The results of each conversion should be listed on the screen and saved to a database (minimum fields: amount, from_currency, to_currency, created_at)
+- Additional screen with conversion history (authentication not required)
+- Functional testing for the conversion history screen
+- Technologies used: php Symfony, jquery, Angularjs, vuejs, React, bootstrap, mariadb/mysql
+- Public repository on GitHub with precise instructions on how to run the project locally. The project should load correctly after a clean installation.
+
 # Requirements:
 
-PHP >= 8.0.12
-MariaDB >= 10.6
+1. PHP >= 8.0.12
+2. MariaDB >= 10.6
 
 # Installation:
 
@@ -18,3 +32,6 @@ MariaDB >= 10.6
 6. Start the Symfony built-in web server using the command "symfony server:start" in the root directory of the project.
 
 Note: Make sure all requirements have been installed correctly before proceeding with the installation. Additionally, you may need to adjust the commands according to your operating system and environment configuration.
+
+# Video demo
+
