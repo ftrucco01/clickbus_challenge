@@ -1,0 +1,14 @@
+.navbar-nav > li:first-child {
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    }
+
+    .navbar-nav > li:last-child {
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    }
+
+    .nav-link:hover {
+        background-color: #6c757d !important;
+        color: white;
+    }

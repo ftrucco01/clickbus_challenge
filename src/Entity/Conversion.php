@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="conversions")
+ * @ORM\Table(name="conversion")
  */
 class Conversion
 {

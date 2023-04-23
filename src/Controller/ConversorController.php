@@ -5,11 +5,11 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
 use App\Repository\CurrencyConversionRepository;
-use App\Entity\Conversion;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
-class IndexController extends AbstractController
+class ConversorController extends AbstractController
 {
     private $currencyConversionRepository;
 
@@ -35,23 +35,17 @@ class IndexController extends AbstractController
     {
         return $this->render('historical.html.twig', [
             'controller_name' => 'IndexController',
+            'conversions' => $this->currencyConversionRepository->list()
         ]);
     }
 
     /**
      * @Route("/historical/save", name="historical_save")
+     * @Method("POST")
      */
-    public function historicalSave(): Response
+    public function historicalSave( Request $request ): Response
     {
-        $currencyConversion = new Conversion();
-
-        $currencyConversion->setQuantity(100);
-        $currencyConversion->setSourceCurrency('USD');
-        $currencyConversion->setTargetCurrency('EUR');
-        $currencyConversion->setAmountConverted(90.22);
-        $currencyConversion->setCreationDate(new \DateTime());
-
-        $this->currencyConversionRepository->save($currencyConversion);
+        $this->currencyConversionRepository->save($request);
 
         return new Response('Historical data saved successfully', Response::HTTP_OK);
     }
