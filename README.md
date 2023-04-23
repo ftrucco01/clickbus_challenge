@@ -5,11 +5,17 @@ Objective: Create a currency converter using a public API that converts 1 USD or
 Requirements:
 
 - A form on the first screen where the user can select the base currency and click "Convert"
+
 - Upon clicking "Convert", asynchronous API requests should be made for each currency
+
 - The results of each conversion should be listed on the screen and saved to a database (minimum fields: amount, from_currency, to_currency, created_at)
+
 - Additional screen with conversion history (authentication not required)
+
 - Functional testing for the conversion history screen
-- Technologies used: php Symfony, jquery, Angularjs, vuejs, React, bootstrap, mariadb/mysql
+
+- Technologies used: php Symfony, jquery, bootstrap, mariadb/mysql
+
 - Public repository on GitHub with precise instructions on how to run the project locally. The project should load correctly after a clean installation.
 
 # Requirements:
@@ -35,3 +41,4 @@ Note: Make sure all requirements have been installed correctly before proceeding
 
 # Video demo
 
+Video demo available: https://github.com/ftrucco01/clickbus_challenge/blob/main/public/video_demo.webm
